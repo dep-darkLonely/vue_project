@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
-import Login from '@/view/Login'
+import Login from '@/view/login/Login'
 import Table from '@/components/Table'
 Vue.use(Router)
 

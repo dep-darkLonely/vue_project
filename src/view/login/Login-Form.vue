@@ -1,0 +1,66 @@
+/**
+ * Description: login form
+ * Date: 2018-09-09
+ * Author: huan7
+ */
+<template>
+  <Form ref="loginForm" :model="loginObject" :rules="loginRule">
+    <FormItem prop="userName">
+      <Input type="text" v-model="loginObject.userName" placeholder="username">
+        <Icon type="ios-person-outline" slot="prepend"></Icon>
+      </Input>
+    </FormItem>
+    <FormItem prop="passWord" class="passWord">
+      <Input type="password" v-model="loginObject.passWord" placeholder="password">
+        <Icon type="ios-lock-outline" slot="prepend"></Icon>
+      </Input>
+    </FormItem>
+    <FormItem class="remember-me">
+      <Checkbox v-model="single">Remember me </Checkbox>
+    </FormItem>
+    <FormItem class="login-btn">
+      <Button type="primary" @click="submit('loginForm')" long> Sign In
+      </Button>
+    </FormItem>
+  </Form>
+</template>
+<script>
+export default{
+  data () {
+    return {
+      loginObject: {
+        userName: '',
+        passWord: ''
+      },
+      loginRule: {
+        userName: [
+          { required: true, message: 'Please fill in the user name', trigger: 'blur' }
+        ],
+        passWord: [
+          { required: true, message: 'Please fill in the password.', trigger: 'blur' },
+          { type: 'string', min: 6, message: 'The password length cannot be less than 6 bits', trigger: 'blur' }
+        ]
+      }
+    }
+  },
+  methods: {
+    submit (formName) {
+      this.$refs[formName].validate((valid) => {
+        if (valid) {
+          this.$Message.success('Login Success!')
+        } else {
+          this.$Message.error('Login Fail!')
+        }
+      })
+    }
+  }
+}
+</script>
+<style>
+.remember-me {
+  margin-bottom: 0px;
+}
+.login-btn,.passWord {
+  margin-bottom: 10px;
+}
+</style>

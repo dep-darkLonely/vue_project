@@ -13,5 +13,23 @@ export default {
    * true: enable
    * false: disable
    */
-  Use18n: false
+  Use18n: false,
+  /**
+   * Is allow to login by QQ
+   * true: enable
+   * false: disable
+   */
+  Qq_login_status: true,
+  /**
+   * Is allow to login by wechat
+   * true: enable
+   * false: disable
+   */
+  Wechat_login_status: false,
+  /**
+   * Is allow to login by weibo
+   * true: enable
+   * false: disable
+   */
+  Weibo_login_status: false
 }
