@@ -9,7 +9,7 @@
       <p slot="title" class="login-text">
         <span>欢迎登陆</span>
       </p>
-      <div >
+      <div>
         <loginForm></loginForm>
       </div>
       <thirdPartLogin></thirdPartLogin>
@@ -32,9 +32,9 @@ export default {
 .login-module {
   width: 350px;
   position: relative;
-  left: 45%;
+  left: 46%;
   top: 25%;
-  margin-left: -130px;
+  margin-left: -170px;
 }
 .login-text {
   text-align: center;

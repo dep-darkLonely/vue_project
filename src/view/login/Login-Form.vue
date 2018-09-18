@@ -16,7 +16,7 @@
       </Input>
     </FormItem>
     <FormItem class="remember-me">
-      <Checkbox v-model="single">Remember me </Checkbox>
+      <Checkbox v-model="loginObject.rememberMe">Remember me </Checkbox>
     </FormItem>
     <FormItem class="login-btn">
       <Button type="primary" @click="submit('loginForm')" long> Sign In
@@ -30,7 +30,8 @@ export default{
     return {
       loginObject: {
         userName: '',
-        passWord: ''
+        passWord: '',
+        rememberMe: false
       },
       loginRule: {
         userName: [
@@ -61,6 +62,6 @@ export default{
   margin-bottom: 0px;
 }
 .login-btn,.passWord {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 </style>
