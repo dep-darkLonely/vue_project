@@ -1,5 +1,5 @@
 /**
- * Global Guard setting
+ * Global Intercept Router setting
  * Created by Administrator on 2018-09-16.
  */
 import routerIndex from './index'
