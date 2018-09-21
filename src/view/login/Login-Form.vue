@@ -48,14 +48,13 @@ export default{
     submit (formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
-          this.$Message.success('Login Success!')
           // handle login request
           this.$axios.post('/login', this.loginObject)
             .then(function (response) {
               this.$Message.success('Login Success!')
             })
             .catch(function (error) {
-              console.log('request error')
+              console.log(error)
             })
         } else {
           this.$Message.error('Login Fail!')
