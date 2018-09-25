@@ -4,16 +4,18 @@
  * Author: huan7
  */
 <template>
-  <div class="login-module">
-    <Card :bordered="false" title="欢迎登陆">
-      <p slot="title" class="login-text">
-        <span>欢迎登陆</span>
-      </p>
-      <div>
-        <loginForm></loginForm>
-      </div>
-      <thirdPartLogin></thirdPartLogin>
-    </Card>
+  <div class="login">
+    <div class="login-module">
+      <Card :bordered="false" title="欢迎登陆">
+        <p slot="title" class="login-text">
+          <span>欢迎登陆</span>
+        </p>
+        <div>
+          <loginForm></loginForm>
+        </div>
+        <thirdPartLogin></thirdPartLogin>
+      </Card>
+    </div>
   </div>
 </template>
 
@@ -29,6 +31,14 @@ export default {
 }
 </script>
 <style>
+.login {
+  width: 100%;
+  height: 100%;
+  background-image: url('../../assets/login/login4.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .login-module {
   width: 350px;
   position: relative;

@@ -15,7 +15,6 @@ var axiosInstance = axios.create()
 // request interceptor
 axiosInstance.interceptors.request.use(function (config) {
   // send before,do something
-  console.log('content:' + config)
   return config
 }, function (error) {
   // request error

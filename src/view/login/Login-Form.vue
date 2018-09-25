@@ -25,6 +25,8 @@
   </Form>
 </template>
 <script>
+import {setToken} from '@/lib/util.js'
+
 export default{
   data () {
     return {
@@ -41,7 +43,8 @@ export default{
           { required: true, message: 'Please fill in the password.', trigger: 'blur' },
           { type: 'string', min: 6, message: 'The password length cannot be less than 6 bits', trigger: 'blur' }
         ]
-      }
+      },
+      setToken
     }
   },
   methods: {
@@ -53,6 +56,11 @@ export default{
             // use arrow function to ensure the same this object
             .then((response) => {
               this.$Message.success('Login Success!')
+              this.setToken(response.data.token)
+              // home page
+              this.$router.push({
+                name: 'table'
+              })
             })
             .catch((error) => {
               console.log(error)
