@@ -50,10 +50,11 @@ export default{
         if (valid) {
           // handle login request
           this.$axios.post('/login', this.loginObject)
-            .then(function (response) {
+            // use arrow function to ensure the same this object
+            .then((response) => {
               this.$Message.success('Login Success!')
             })
-            .catch(function (error) {
+            .catch((error) => {
               console.log(error)
             })
         } else {
