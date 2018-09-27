@@ -3,21 +3,23 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store/index'
 // add iView UI components
 import iView from 'iview/dist/iview'
 import 'iview/dist/styles/iview.css'
 import './router/router.js'
 // global register axios
-import axios from './axios/axios.js'
+// import axios from './axios/axios.js'
 // global register mock
 import './mock/index.js'
 
 Vue.use(iView)
-Vue.use(axios)
+// Vue.use(axios)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
   components: { App }
 })

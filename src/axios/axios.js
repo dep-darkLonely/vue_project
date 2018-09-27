@@ -30,6 +30,7 @@ axiosInstance.interceptors.response.use(function (response) {
   return Promise.reject(error)
 })
 
+/*
 // package axios
 axiosInstance.install = function (Vue, option) {
   // add instance method'
@@ -40,4 +41,5 @@ axiosInstance.install = function (Vue, option) {
     window.Vue.use(axiosInstance)
   }
 }
+*/
 export default axiosInstance
