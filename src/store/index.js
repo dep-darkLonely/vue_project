@@ -4,9 +4,9 @@
  * Date: 2018-09-25
  * Author: huan7
  */
-import Vue from 'Vue'
+import Vue from 'vue'
 import Vuex from 'Vuex'
-import user from './modules/login'
+import user from './modules/login.js'
 
 Vue.use(Vuex)
 

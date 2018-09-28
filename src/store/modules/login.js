@@ -44,11 +44,9 @@ const user = {
     // login request handle
     LoginByUserName ({commit}, loginObject) {
       // send login request by axios
-      console.log('123123')
       return new Promise((resolve, reject) => {
         login(loginObject)
           .then((response) => {
-            console.log(response.data)
             commit('SET_TOKEN', response.data.token)
             commit('SET_INTRO', response.data.introduction)
             commit('SET_USERNAME', loginObject.username)
@@ -56,7 +54,7 @@ const user = {
             setToken(response.data.token)
             resolve()
           })
-          .cache((error) => {
+          .catch((error) => {
             reject(error)
           })
       })

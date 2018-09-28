@@ -3,10 +3,10 @@
  * Date: 2018-09-26
  * Author: huan7
  */
-import axios from '@/axios/axios'
+import axios from '@/axios'
 
 // axios login request
-export const login = ({loginObject}) => {
+export const login = (loginObject) => {
   return axios.post('/login', loginObject)
 }
 

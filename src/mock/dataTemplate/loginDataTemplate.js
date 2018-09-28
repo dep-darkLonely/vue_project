@@ -6,7 +6,7 @@
 import Mock from 'mockjs'
 
 // define variable
-var backResult = ''
+// var backResult = ''
 
 const userDataTemplate = Mock.mock({
   administrator: {
@@ -38,9 +38,10 @@ const userDataTemplate = Mock.mock({
 export const loginDataTemplate = function (option) {
   // get username
   const {userName} = JSON.parse(option.body)
-  if (userDataTemplate[userName.split('@')[0]] !== undefined) {
-    backResult = userDataTemplate[userName.split('@')[0]]
-  }
-  console.log(backResult)
-  return backResult
+  /*
+    if (userDataTemplate[userName.split('@')[0]] !== undefined) {
+      backResult = userDataTemplate[userName.split('@')[0]]
+    }
+  */
+  return userDataTemplate[userName.split('@')[0]]
 }

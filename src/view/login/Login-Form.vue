@@ -59,6 +59,7 @@ export default{
               })
             })
             .catch((error) => {
+              this.$Message.error('Login Fail!')
               console.log(error)
             })
         } else {
