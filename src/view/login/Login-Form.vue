@@ -55,7 +55,7 @@ export default{
               this.$Message.success('Login Success!')
               // home page
               this.$router.push({
-                name: 'table'
+                path: '/'
               })
             })
             .catch((error) => {

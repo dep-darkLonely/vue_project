@@ -26,7 +26,7 @@ routerIndex.beforeEach((to, from, next) => {
     })
   } else if (token && to.name === loginPageName) {
     next({
-      name: 'HelloWorld'
+      name: 'home'
     })
   } else {
     next()
