@@ -35,9 +35,9 @@
 </template>
 <script>
 import personImage from '@/assets/person.jpg'
-export default{
+export default {
   data () {
-    return  {
+    return {
       value1: false,
       personAvatar: personImage
     }
