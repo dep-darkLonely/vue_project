@@ -4,7 +4,9 @@
  * Author: huan7
  */
 import Mock from 'mockjs'
-import {loginDataTemplate} from './dataTemplate/loginDataTemplate.js'
+import {
+  loginDataTemplate
+} from './dataTemplate/loginDataTemplate.js'
 
 // mock(url, type, dataTemplate)
 /*

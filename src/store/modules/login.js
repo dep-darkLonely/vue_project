@@ -58,6 +58,10 @@ const user = {
             reject(error)
           })
       })
+    },
+    LoginOut ({commit}) {
+      commit('SET_TOKEN', '')
+      setToken('')
     }
   }
 }
