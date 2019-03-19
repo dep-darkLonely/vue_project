@@ -5,7 +5,11 @@
  */
 <template>
   <div>
-    <Menu active-name="1-2" theme="dark" width="auto" :class="menuitemClasses">
+    <!-- logo -->
+    <div class="logo ivu-layout-header">
+      <span class="logo-text">XXXXX</span>
+    </div>
+    <Menu active-name="1-2" :theme="theme3" width="auto" :class="menuitemClasses">
       <Submenu name="1">
         <template slot="title">
           <Icon type="ios-paper" size="24"/>
@@ -39,6 +43,16 @@
         </MenuItem>
       </Submenu>
     </Menu>
+
+    <!-- theme -->
+    <br>
+    <p>Change Theme</p>
+    <RadioGroup v-model="theme3">
+      <Radio label="light"></Radio>
+      <Radio label="dark"></Radio>
+      <Radio label="primary"></Radio>
+    </RadioGroup>
+
   </div>
 </template>
 <script>
@@ -50,6 +64,11 @@ export default{
         'menu-item',
         this.$parent.isCollapsed ? 'collapsed-menu' : ''
       ]
+    }
+  },
+  data() {
+    return {
+      theme3: 'primary'
     }
   }
 }
@@ -79,5 +98,16 @@ export default{
     transition: font-size .2s ease .2s, transform .2s ease .2s;
     vertical-align: middle;
     font-size: 22px;
+  }
+  .logo {
+    padding: 0;
+    background-color: #19be6b;
+  }
+  .logo .logo-text {
+    color: #ffffff;
+    font-weight: bolder;
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
   }
 </style>
