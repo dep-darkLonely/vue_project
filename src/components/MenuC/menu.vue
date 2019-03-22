@@ -9,7 +9,7 @@
         <div class="logo ivu-layout-header">
             <span class="logo-text">XXXXX</span>
         </div>
-        <Menu active-name="1-2" :theme="theme3" width="auto" :accordion="true" :class="menuitemClasses">
+        <Menu active-name="1-2" :theme="themeToMenu" width="auto" :accordion="true" :class="menuitemClasses">
             <Submenu name="1">
                 <template slot="title">
                     <Icon type="ios-paper" size="24" />
@@ -49,7 +49,7 @@
                 </MenuItem>
                 <MenuItem name="2-2">
                     <Icon type="md-cart" size="24" />
-                    <span>活跃用户</span>
+                    <span>用户列表</span>
                 </MenuItem>
             </Submenu>
         </Menu>
@@ -57,7 +57,6 @@
 </template>
 <script>
 export default {
-    // props validate
     computed: {
         menuitemClasses: function() {
             return [
@@ -66,11 +65,7 @@ export default {
             ];
         }
     },
-    data() {
-        return {
-            theme3: "light"
-        };
-    }
+    props:['themeToMenu']
 };
 </script>
 <style scope>

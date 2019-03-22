@@ -9,7 +9,7 @@
         <div class="demo-avatar" >
 			<div class="theme">
 				<Tooltip content="switch theme" placement="bottom">
-					<i-switch  size="large">
+					<i-switch  size="large" v-model="status" @on-change="changeTheme">
 						<span  slot="open">light</span>
 						<span  slot="close">dark</span>
 					</i-switch>
@@ -68,7 +68,7 @@
             <p>Some contents...</p>
         </Drawer>
 
-    </Header>
+    </Header> 
 </template>
 
 <script>
@@ -84,7 +84,8 @@ export default {
             value1: false,
             personAvatar: personImage,
             modal1: false,
-            userInfoModal: false
+			userInfoModal: false,
+			status: true 				// 默认light主题
         };
     },
     methods: {
@@ -103,7 +104,15 @@ export default {
         },
         getUserInfo: function() {
             this.userInfoModal = true;
-        }
+		},
+		changeTheme: function(status) {
+            /**
+             * status: 主题切换
+             * true: Light
+             * false： Dark
+             */
+			this.$emit('theme-status', status == true ? "light" : "dark" );
+		}
     }
 };
 </script>
