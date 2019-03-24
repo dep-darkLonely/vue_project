@@ -85,7 +85,7 @@ export default {
             personAvatar: personImage,
             modal1: false,
 			userInfoModal: false,
-			status: true 				// 默认light主题
+			status: false 				// 默认dark主题
         };
     },
     methods: {
@@ -113,7 +113,12 @@ export default {
              */
 			this.$emit('theme-status', status == true ? "light" : "dark" );
 		}
-    }
+    },
+    // computed: {
+    //     defaultTheme: function() {
+    //         this.$emit('default-theme', this.status);
+    //     }
+    // }
 };
 </script>
 <style>
